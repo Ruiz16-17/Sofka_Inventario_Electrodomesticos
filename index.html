@@ -8,9 +8,51 @@
 </head>
 <body>
 
+    <form action="" id="form">
+
+        <select id="sltTipoElectrodomestico">
+            <option value="Electrodoméstico">Electrodoméstico</option>
+            <option value="Nevera" onclick="mostrar()">Nevera</option>
+            <option value="TV">TV</option>
+        </select>
+
+        <div id="divElectrodomestico">
+
+            <input type="text" id="txtConsumo" placeholder="Ingrese el consumo">
+
+            <input type="text" id="txtProcedencia" placeholder="Ingrese la procedencia">
+        </div>
+
+        <div id="divNevera" hidden>
+
+            <input type="text" id="txtCapacidad" placeholder="Ingrese la capacidad de la nevera">
+
+        </div>
+
+        <div id="divTv" hidden>
+
+            <input type="text" id="txtTamanio" placeholder="Ingrese las pulgadas del televisor">
+
+            <br>
+
+            <label>¿Tiene TDT?</label>
+            <select id="sltIsTDT" >
+                <option value="true">Sí</option>
+                <option value="false">No</option>
+            </select>
+
+        </div>
+
+        <br>
+        <button type="submit">Ingresar</button>
+
+    </form>
+    
+
     <script type="module" src="js/Nevera.js"></script>
     <script type="module" src="js/Electrodomestico.js"></script>
     <script type="module" src="js/TV.js"></script>
-
+    <script type="module" src="js/Carrito.js"></script>
+    <script src="js/MostrarDiv.js"></script>
 </body>
 </html>

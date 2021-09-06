@@ -1,6 +1,6 @@
 import Electrodomestico from "../js/Electrodomestico.js";
 
-class Nevera extends Electrodomestico {
+export default class Nevera extends Electrodomestico {
 
     constructor(consumo, procedencia, capacidad) {
         super(consumo, procedencia);
@@ -40,7 +40,3 @@ class Nevera extends Electrodomestico {
     }
 
 }
-
-var nevera = new Nevera("A","Nacional",160);
-
-console.log(nevera.calcularPrecio());

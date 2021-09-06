@@ -1,6 +1,6 @@
 import Electrodomestico from "../js/Electrodomestico.js";
 
-class TV extends Electrodomestico {
+export default class TV extends Electrodomestico {
 
     constructor(consumo, procedencia, tamanio, isTDT) {
         super(consumo, procedencia);
@@ -46,7 +46,3 @@ class TV extends Electrodomestico {
     }
 
 }
-
-//var tv = new TV("A","Nacional",50,true);
-
-//console.log(tv.calcularPrecio());

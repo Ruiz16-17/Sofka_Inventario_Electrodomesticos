@@ -79,6 +79,6 @@ export default class Electrodomestico{
 
 }
 
-//var el = new Electrodomestico("A", "Nacional");
+    
+    
 
-//console.log(el.calcularPrecio());
