@@ -10,26 +10,36 @@
 
     <form action="" id="form">
 
-        <select id="sltTipoElectrodomestico">
+        <select id="sltTipoElectrodomestico" onchange="mostrarDiv(this)">
             <option value="Electrodoméstico">Electrodoméstico</option>
-            <option value="Nevera" onclick="mostrar()">Nevera</option>
+            <option value="Nevera">Nevera</option>
             <option value="TV">TV</option>
         </select>
 
         <div id="divElectrodomestico">
 
-            <input type="text" id="txtConsumo" placeholder="Ingrese el consumo">
+            <label>Ingrese el consumo</label>
+            <select id="sltConsumo">
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+            </select>
 
-            <input type="text" id="txtProcedencia" placeholder="Ingrese la procedencia">
+            <label>Ingrese la procedencia</label>
+            <select id="sltProcedencia">
+                <option value="Nacional">Nacional</option>
+                <option value="Importado">Importado</option>
+            </select>
+
         </div>
 
-        <div id="divNevera" hidden>
+        <div id="divNevera" style="display: none;">
 
             <input type="text" id="txtCapacidad" placeholder="Ingrese la capacidad de la nevera">
 
         </div>
 
-        <div id="divTv" hidden>
+        <div id="divTv" style="display: none;">
 
             <input type="text" id="txtTamanio" placeholder="Ingrese las pulgadas del televisor">
 
@@ -52,7 +62,7 @@
     <script type="module" src="js/Nevera.js"></script>
     <script type="module" src="js/Electrodomestico.js"></script>
     <script type="module" src="js/TV.js"></script>
-    <script type="module" src="js/Carrito.js"></script>
+    <script type="module" src="js/Main.js"></script>
     <script src="js/MostrarDiv.js"></script>
 </body>
 </html>
