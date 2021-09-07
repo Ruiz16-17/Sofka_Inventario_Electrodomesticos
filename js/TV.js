@@ -34,7 +34,6 @@ export default class TV extends Electrodomestico {
             if (this.getTDT()) {
 
                 precio += 250000;
-
             }
         } else if (this.getTDT()) {
 

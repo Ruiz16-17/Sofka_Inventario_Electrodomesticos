@@ -20,16 +20,26 @@ function asignarDatosNevera(consumo,procedencia) {
 
 function asignarDatosTv(consumo,procedencia) {
     
-    let isTDT = document.getElementById("sltIsTDT").value;
+    var tv = new TV();
+
+    var isTDT = document.getElementById("sltIsTDT").value;
     let tamanio = document.getElementById("txtTamanio").value;
 
-    var tv = new TV(consumo,procedencia,tamanio,isTDT);
+    if(isTDT == "true"){
+        tv.setTDT(true);
+    }else{
+        tv.setTDT(false);
+    }
+
+    tv.setConsumo(consumo);
+    tv.setProcedencia(procedencia);
+    tv.setTamanio(tamanio)
 
     return tv;
 
 }
 
-document.getElementById('form').addEventListener('submit', function () {
+document.getElementById('btnIngresar').addEventListener('click', function () {
 
     var producto = document.getElementById("sltTipoElectrodomestico").value;
     var consumo = document.getElementById('sltConsumo').value;
@@ -42,17 +52,27 @@ document.getElementById('form').addEventListener('submit', function () {
         var electrodomestico = asignarDatosElectrodomestico(consumo,procedencia);
 
         precio = electrodomestico.calcularPrecio();
+
+        inventario.push(electrodomestico);
         
     }else if(producto === "Nevera"){
         
         var nevera = asignarDatosNevera(consumo,procedencia);
-        
+        inventario.push(nevera);
         precio = nevera.calcularPrecio();
     }else{
 
         var tv = asignarDatosTv(consumo,procedencia);
+        inventario.push(tv);
         precio = tv.calcularPrecio();
     }
     
+    document.getElementById('form').reset();
+
     alert(precio);
+
+    mostrarDiv('');
+    
+    console.log(inventario);
+    console.log(stockTvTDT(inventario));
 });

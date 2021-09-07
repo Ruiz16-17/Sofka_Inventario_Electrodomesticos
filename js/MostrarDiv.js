@@ -13,6 +13,7 @@ function mostrarDiv(mostrar) {
 
         divTv = document.getElementById("divTv");
         divTv.style.display = "";
+
     }else{
 
         divNevera = document.getElementById("divNevera");

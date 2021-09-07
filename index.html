@@ -8,13 +8,18 @@
 </head>
 <body>
 
-    <form action="" id="form">
+    <form id="form">
+        <div>
 
-        <select id="sltTipoElectrodomestico" onchange="mostrarDiv(this)">
-            <option value="Electrodoméstico">Electrodoméstico</option>
-            <option value="Nevera">Nevera</option>
-            <option value="TV">TV</option>
-        </select>
+            <input type="number" id="nmbCantidad" placeholder="Ingrese la cantidad">
+
+            <select id="sltTipoElectrodomestico" onchange="mostrarDiv(this)">
+                <option value="Electrodoméstico">Electrodoméstico</option>
+                <option value="Nevera">Nevera</option>
+                <option value="TV">TV</option>
+            </select>
+
+        </div>
 
         <div id="divElectrodomestico">
 
@@ -54,15 +59,203 @@
         </div>
 
         <br>
-        <button type="submit">Ingresar</button>
-
+        <button type="button" id="btnIngresar">Ingresar</button>
+        <button type="button" id="btnMostrarInventario">Mostrar Inventario</button>
     </form>
-    
+
+    <div id="inventario">
+        <table border="1">
+            <thead>
+                <th>Producto</th>
+                <th>Consumo</th>
+                <th>Procedencia</th>
+                <th>Cantidad</th>
+            </thead>
+            <tbody>
+                
+                <tr>
+                    <td rowspan="6">TV</td>
+                    <td rowspan="2">A</td>
+                    <td>Nacional</td>
+                    <td id="cantidadNacionalConsumoA"></td>
+                </tr>
+                <tr>
+                    <td>Importado</td>
+                    <td id="cantidadImportado"></td>
+                </tr>
+                <tr>
+                    <td rowspan="2">B</td>
+                    <td>Nacional</td>
+                    <td id="cantidadNacionalConsumoB"></td>
+                </tr>
+                <tr>
+                    <td>Importado</td>
+                    <td id="cantidadImportado"></td>
+                </tr>
+                <tr>
+                    <td rowspan="2">C</td>
+                    <td>Nacional</td>
+                    <td id="cantidadNacionalConsumoC"></td>
+                </tr>
+                <tr>
+                    <td>Importado</td>
+                    <td id="cantidadImportado"></td>
+                </tr>
+                
+                <tr>
+                    <td rowspan="6">TV con TDT</td>
+                    <td rowspan="2">A</td>
+                    <td>Nacional</td>
+                    <td id="cantidadNacionalConsumoA"></td>
+                </tr>
+                <tr>
+                    <td>Importado</td>
+                    <td id="cantidadImportado"></td>
+                </tr>
+                <tr>
+                    <td rowspan="2">B</td>
+                    <td>Nacional</td>
+                    <td id="cantidadNacionalConsumoB"></td>
+                </tr>
+                <tr>
+                    <td>Importado</td>
+                    <td id="cantidadImportado"></td>
+                </tr>
+                <tr>
+                    <td rowspan="2">C</td>
+                    <td>Nacional</td>
+                    <td id="cantidadNacionalConsumoC"></td>
+                </tr>
+                <tr>
+                    <td>Importado</td>
+                    <td id="cantidadImportado"></td>
+                </tr>
+                
+                <tr>
+                    <td rowspan="6">TV mayor a 40 pulgadas</td>
+                    <td rowspan="2">A</td>
+                    <td>Nacional</td>
+                    <td id="cantidadNacionalConsumoA"></td>
+                </tr>
+                <tr>
+                    <td>Importado</td>
+                    <td id="cantidadImportado"></td>
+                </tr>
+                <tr>
+                    <td rowspan="2">B</td>
+                    <td>Nacional</td>
+                    <td id="cantidadNacionalConsumoB"></td>
+                </tr>
+                <tr>
+                    <td>Importado</td>
+                    <td id="cantidadImportado"></td>
+                </tr>
+                <tr>
+                    <td rowspan="2">C</td>
+                    <td>Nacional</td>
+                    <td id="cantidadNacionalConsumoC"></td>
+                </tr>
+                <tr>
+                    <td>Importado</td>
+                    <td id="cantidadImportado"></td>
+                </tr>
+                
+                <tr>
+                    <td rowspan="6">TV con TDT y mayor a 40 pulgadas</td>
+                    <td rowspan="2">A</td>
+                    <td>Nacional</td>
+                    <td id="cantidadNacionalConsumoA"></td>
+                </tr>
+                <tr>
+                    <td>Importado</td>
+                    <td id="cantidadImportado"></td>
+                </tr>
+                <tr>
+                    <td rowspan="2">B</td>
+                    <td>Nacional</td>
+                    <td id="cantidadNacionalConsumoB"></td>
+                </tr>
+                <tr>
+                    <td>Importado</td>
+                    <td id="cantidadImportado"></td>
+                </tr>
+                <tr>
+                    <td rowspan="2">C</td>
+                    <td>Nacional</td>
+                    <td id="cantidadNacionalConsumoC"></td>
+                </tr>
+                <tr>
+                    <td>Importado</td>
+                    <td id="cantidadImportado"></td>
+                </tr>
+                
+                <tr>
+                    <td rowspan="6">Nevera</td>
+                    <td rowspan="2">A</td>
+                    <td>Nacional</td>
+                    <td id="cantidadNacionalConsumoA"></td>
+                </tr>
+                <tr>
+                    <td>Importado</td>
+                    <td id="cantidadImportado"></td>
+                </tr>
+                <tr>
+                    <td rowspan="2">B</td>
+                    <td>Nacional</td>
+                    <td id="cantidadNacionalConsumoB"></td>
+                </tr>
+                <tr>
+                    <td>Importado</td>
+                    <td id="cantidadImportado"></td>
+                </tr>
+                <tr>
+                    <td rowspan="2">C</td>
+                    <td>Nacional</td>
+                    <td id="cantidadNacionalConsumoC"></td>
+                </tr>
+                <tr>
+                    <td>Importado</td>
+                    <td id="cantidadImportado"></td>
+                </tr>
+
+                <tr>
+                    <td rowspan="6">Nevera con más de 120 litros de capacidad</td>
+                    <td rowspan="2">A</td>
+                    <td>Nacional</td>
+                    <td id="cantidadNacionalConsumoA"></td>
+                </tr>
+                <tr>
+                    <td>Importado</td>
+                    <td id="cantidadImportado"></td>
+                </tr>
+                <tr>
+                    <td rowspan="2">B</td>
+                    <td>Nacional</td>
+                    <td id="cantidadNacionalConsumoB"></td>
+                </tr>
+                <tr>
+                    <td>Importado</td>
+                    <td id="cantidadImportado"></td>
+                </tr>
+                <tr>
+                    <td rowspan="2">C</td>
+                    <td>Nacional</td>
+                    <td id="cantidadNacionalConsumoC"></td>
+                </tr>
+                <tr>
+                    <td>Importado</td>
+                    <td id="cantidadImportado"></td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </div>
 
     <script type="module" src="js/Nevera.js"></script>
     <script type="module" src="js/Electrodomestico.js"></script>
     <script type="module" src="js/TV.js"></script>
     <script type="module" src="js/Main.js"></script>
     <script src="js/MostrarDiv.js"></script>
+    <script src="js/Inventario.js"></script>
 </body>
 </html>
