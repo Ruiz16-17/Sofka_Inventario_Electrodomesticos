@@ -44,6 +44,7 @@ document.getElementById('btnIngresar').addEventListener('click', function () {
     var producto = document.getElementById("sltTipoElectrodomestico").value;
     var consumo = document.getElementById('sltConsumo').value;
     var procedencia = document.getElementById('sltProcedencia').value;
+    var cantidad = document.getElementById('nmbCantidad').value;
 
     var precio = 0;
 
@@ -53,17 +54,21 @@ document.getElementById('btnIngresar').addEventListener('click', function () {
 
         precio = electrodomestico.calcularPrecio();
 
-        inventario.push(electrodomestico);
+        agregar_a_Inventario(cantidad,electrodomestico);
         
     }else if(producto === "Nevera"){
         
         var nevera = asignarDatosNevera(consumo,procedencia);
-        inventario.push(nevera);
+
+        agregar_a_Inventario(cantidad,nevera);
+
         precio = nevera.calcularPrecio();
     }else{
 
         var tv = asignarDatosTv(consumo,procedencia);
-        inventario.push(tv);
+        
+        agregar_a_Inventario(cantidad,tv);
+
         precio = tv.calcularPrecio();
     }
     

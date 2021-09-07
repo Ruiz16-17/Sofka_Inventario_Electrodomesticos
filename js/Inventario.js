@@ -125,3 +125,12 @@ function stockNeveraMayor120(arreglo,procedencia,consumo) {
     
     return cantidad;
 }
+
+function agregar_a_Inventario(cantidad, producto) {
+    
+    for (let index = 0; index < cantidad; index++) {
+        
+        inventario.push(producto);
+        
+    }
+}
