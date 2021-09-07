@@ -71,7 +71,7 @@ document.getElementById('btnIngresar').addEventListener('click', function () {
 
     alert(precio);
 
-    mostrarDiv('');
+    mostrarDivElectrodomesticos('');
     
     stock(inventario);
 });

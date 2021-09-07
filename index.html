@@ -13,7 +13,7 @@
 
             <input type="number" id="nmbCantidad" placeholder="Ingrese la cantidad">
 
-            <select id="sltTipoElectrodomestico" onchange="mostrarDiv(this)">
+            <select id="sltTipoElectrodomestico" onchange="mostrarDivElectrodomesticos(this)">
                 <option value="Electrodoméstico">Electrodoméstico</option>
                 <option value="Nevera">Nevera</option>
                 <option value="TV">TV</option>
@@ -60,10 +60,21 @@
 
         <br>
         <button type="button" id="btnIngresar">Ingresar</button>
-        <button type="button" id="btnMostrarInventario">Mostrar Inventario</button>
+        
     </form>
 
+<div>
+
+    <button type="button" id="btnMostrarInventario" onclick="mostrarOcultar_Inventario('')">Mostrar Inventario</button>
+
+    <button type="button" id="btnOcultarInventario" onclick="mostrarOcultar_Inventario('none')">Ocultar Inventario</button>
+
+</div>
+
     <div id="inventario">
+
+        
+
         <table border="1">
             <thead>
                 <th>Producto</th>

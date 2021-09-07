@@ -1,4 +1,4 @@
-function mostrarDiv(mostrar) {
+function mostrarDivElectrodomesticos(mostrar) {
     if (mostrar.value=="Nevera"){
         divNevera = document.getElementById("divNevera");
         divNevera.style.display = "";
@@ -24,4 +24,8 @@ function mostrarDiv(mostrar) {
     }
 }
 
+function mostrarOcultar_Inventario(accion) {
 
+    divInventario = document.getElementById("inventario");
+    divInventario.style.display = accion;
+}
