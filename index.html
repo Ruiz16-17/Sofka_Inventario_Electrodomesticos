@@ -13,7 +13,7 @@
 
             <input type="number" id="nmbCantidad" placeholder="Ingrese la cantidad">
 
-            <select id="sltTipoElectrodomestico" onchange="mostrarDivElectrodomesticos(this)">
+            <select id="sltTipoElectrodomestico" onchange="mostrarDivElectrodomesticos(this,'divNevera','divTv')">
                 <option value="Electrodoméstico">Electrodoméstico</option>
                 <option value="Nevera">Nevera</option>
                 <option value="TV">TV</option>
@@ -63,13 +63,65 @@
         
     </form>
 
-<div>
+    <hr>
 
-    <button type="button" id="btnMostrarInventario" onclick="mostrarOcultar_Inventario('')">Mostrar Inventario</button>
+    <div>
+        <button type="button" id="btnHacer Pedido" onclick="mostrarOcultar('pedido','');mostrarOcultar('divElectrodomesticoPedido','');">Hacer Pedido</button>
+        <button type="button" id="btnCerrar Pedido" onclick="mostrarOcultar('pedido','none');mostrarOcultar('divElectrodomesticoPedido','none');">Cerrar Pedido</button>
+    </div>
 
-    <button type="button" id="btnOcultarInventario" onclick="mostrarOcultar_Inventario('none')">Ocultar Inventario</button>
+    
+    <div id="pedido" style="display: none;">
+        <form id="formPedido">
 
-</div>
+            <input type="number" name="nmbCantidadPedido[]" placeholder="Ingrese la cantidad">
+
+            <select id="sltTipoElectrodomesticoPedido" name="sltTipoElectrodomesticoPedido[]">
+                <option value="Electrodoméstico">Electrodoméstico</option>
+                <option value="Nevera">Nevera</option>
+                <option value="TV">TV</option>
+            </select>
+
+        </div>
+
+        <div id="divElectrodomesticoPedido" style="display: none;">
+
+            <label>Ingrese el consumo</label>
+            <select id="sltConsumoPedido" name="sltConsumoPedido[]">
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+            </select>
+
+            <label>Ingrese la procedencia</label>
+            <select id="sltProcedenciaPedido" name="sltProcedenciaPedido[]">
+                <option value="Nacional">Nacional</option>
+                <option value="Importado">Importado</option>
+            </select>
+
+            <br>
+
+            <button type="button" id="btnAnadir">Añadir</button>
+
+            <br>
+            
+            <button type="button" id="btnSolicitar">Solicitar</button>
+        </div>
+
+        <br>
+            
+        </form>
+    </div>
+
+    <hr>
+
+    <div>
+
+        <button type="button" id="btnMostrarInventario" onclick="mostrarOcultar('inventario','')">Mostrar Inventario</button>
+
+        <button type="button" id="btnOcultarInventario" onclick="mostrarOcultar('inventario','none')">Ocultar Inventario</button>
+
+    </div>
 
     <div id="inventario" style="display: none;">
 
@@ -295,5 +347,6 @@
     <script type="module" src="js/Main.js"></script>
     <script src="js/MostrarDiv.js"></script>
     <script src="js/Inventario.js"></script>
+    <script type="module" src="js/Factura.js"></script>
 </body>
 </html>

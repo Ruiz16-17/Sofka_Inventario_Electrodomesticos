@@ -25,7 +25,7 @@ function stockElectrodomestico(arreglo,procedencia,consumo) {
     var cantidad = 0;
     for (let index = 0; index < arreglo.length; index++) {
         
-        if(arreglo[index].consumo === consumo && arreglo[index].procedencia === procedencia){
+        if(arreglo[index].consumo === consumo && arreglo[index].procedencia === procedencia && arreglo[index].capacidad === undefined && arreglo[index].isTDT === undefined){
 
             cantidad++;
         }

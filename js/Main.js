@@ -46,13 +46,9 @@ document.getElementById('btnIngresar').addEventListener('click', function () {
     var procedencia = document.getElementById('sltProcedencia').value;
     var cantidad = document.getElementById('nmbCantidad').value;
 
-    var precio = 0;
-
     if(producto === "Electrodoméstico"){
 
         var electrodomestico = asignarDatosElectrodomestico(consumo,procedencia);
-
-        precio = electrodomestico.calcularPrecio();
 
         agregar_a_Inventario(cantidad,electrodomestico);
         
@@ -62,21 +58,17 @@ document.getElementById('btnIngresar').addEventListener('click', function () {
 
         agregar_a_Inventario(cantidad,nevera);
 
-        precio = nevera.calcularPrecio();
     }else{
 
         var tv = asignarDatosTv(consumo,procedencia);
         
         agregar_a_Inventario(cantidad,tv);
 
-        precio = tv.calcularPrecio();
     }
     
     document.getElementById('form').reset();
 
-    alert(precio);
-
     mostrarDivElectrodomesticos('');
-    
+
     stock(inventario);
 });

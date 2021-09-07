@@ -1,17 +1,17 @@
-function mostrarDivElectrodomesticos(mostrar) {
+function mostrarDivElectrodomesticos(mostrar,idNevera, idTV) {
     if (mostrar.value=="Nevera"){
-        divNevera = document.getElementById("divNevera");
+        divNevera = document.getElementById(idNevera);
         divNevera.style.display = "";
 
-        divTv = document.getElementById("divTv");
+        divTv = document.getElementById(idTV);
         divTv.style.display = "none";
 
     }else if (mostrar.value=="TV"){
 
-        divNevera = document.getElementById("divNevera");
+        divNevera = document.getElementById(idNevera);
         divNevera.style.display="none";
 
-        divTv = document.getElementById("divTv");
+        divTv = document.getElementById(idTV);
         divTv.style.display = "";
 
     }else{
@@ -24,8 +24,8 @@ function mostrarDivElectrodomesticos(mostrar) {
     }
 }
 
-function mostrarOcultar_Inventario(accion) {
+function mostrarOcultar(idDiv,accion) {
 
-    divInventario = document.getElementById("inventario");
+    divInventario = document.getElementById(idDiv);
     divInventario.style.display = accion;
 }
