@@ -73,6 +73,5 @@ document.getElementById('btnIngresar').addEventListener('click', function () {
 
     mostrarDiv('');
     
-    console.log(inventario);
-    console.log(stockTvTDT(inventario));
+    stock(inventario);
 });
